@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Members from './components/Members';
+import Activities from './components/Activities';
+import SocialMedia from './components/SocialMedia';
+import Applications from './components/Applications';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/">ホーム</Link></li>
+            <li><Link to="/about">説明</Link></li>
+            <li><Link to="/members">メンバー紹介</Link></li>
+            <li><Link to="/activities">これまでの活動</Link></li>
+            <li><Link to="/socialmedia">各SNS</Link></li>
+            <li><Link to="/applications">各種申し込み</Link></li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/members" element={<Members />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/socialmedia" element={<SocialMedia />} />
+          <Route path="/applications" element={<Applications />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
