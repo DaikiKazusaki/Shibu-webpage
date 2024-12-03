@@ -32,6 +32,7 @@ const App = () => {
           <Route path="/socialmedia" element={<SocialMedia />} />
           <Route path="/applications" element={<Applications />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
