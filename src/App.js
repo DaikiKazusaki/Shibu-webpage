@@ -16,7 +16,24 @@ const App = () => {
     <Router>
       <div>
         <Header />
-        <h1>活動内容</h1>
+        <nav>
+          <ul>
+            <li><Link to="/">ホーム</Link></li>
+            <li><Link to="/about">説明</Link></li>
+            <li><Link to="/members">メンバー紹介</Link></li>
+            <li><Link to="/activities">これまでの活動</Link></li>
+            <li><Link to="/socialmedia">各SNS</Link></li>
+            <li><Link to="/applications">各種申し込み</Link></li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/members" element={<Members />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/socialmedia" element={<SocialMedia />} />
+          <Route path="/applications" element={<Applications />} />
+        </Routes>
         <Footer />
       </div>
     </Router>
