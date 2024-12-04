@@ -19,7 +19,7 @@ const Header = () => {
               <li><Link to="/about">説明</Link></li>
               <li><Link to="/members">メンバー紹介</Link></li>
               <li><Link to="/activities">これまでの活動</Link></li>
-              <li><Link to="/socialmedia">各SNS</Link></li>
+              <li><Link to="/socialmedia">各種SNS</Link></li>
               <li><Link to="/applications">各種申し込み</Link></li>
             </ul>
           </nav>
